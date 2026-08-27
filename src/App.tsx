@@ -24,43 +24,22 @@ export const App: React.FC = () => {
       <main className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center mt-2">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           
-          {/* LEFT SECTION: HERO 4:3 BANNER PREVIEW (8 / 12 COLS) */}
-          <div className="lg:col-span-8 bg-[#0a0b0e] border border-[#1a1b22] rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col">
-            
-            {/* Top Preview Status Bar */}
-            <div className="pb-3.5 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span 
-                  className="w-2.5 h-2.5 rounded-full inline-block animate-pulse transition-colors duration-300"
-                  style={{ backgroundColor: bannerData.theme.primaryColor }}
-                />
-                <span 
-                  className="text-[11px] font-extrabold uppercase tracking-[0.2em] font-['Plus_Jakarta_Sans',sans-serif] transition-colors duration-300"
-                  style={{ color: bannerData.theme.primaryColor }}
-                >
-                  LIVE COMPONENT PREVIEW
-                </span>
-              </div>
-            </div>
-
-            {/* 4:3 Banner Canvas */}
-            <div className="w-full">
-              <FinanceBanner
-                theme={bannerData.theme}
-                dealerName={bannerData.dealerName}
-                dealerLocation={bannerData.dealerLocation}
-                dealerBadgeText={bannerData.dealerBadgeText}
-                vehicleImage={bannerData.vehicleImage}
-                vehicle={bannerData.vehicle}
-                finance={bannerData.finance}
-                features={bannerData.features}
-                ctaText={bannerData.ctaText}
-                phone={bannerData.phone}
-                website={bannerData.website}
-                hours={bannerData.hours}
-              />
-            </div>
-
+          {/* LEFT SECTION: HERO 4:3 BANNER PREVIEW (8 / 12 COLS - BORDER CARD REMOVED) */}
+          <div className="lg:col-span-8 w-full flex flex-col justify-center">
+            <FinanceBanner
+              theme={bannerData.theme}
+              dealerName={bannerData.dealerName}
+              dealerLocation={bannerData.dealerLocation}
+              dealerBadgeText={bannerData.dealerBadgeText}
+              vehicleImage={bannerData.vehicleImage}
+              vehicle={bannerData.vehicle}
+              finance={bannerData.finance}
+              features={bannerData.features}
+              ctaText={bannerData.ctaText}
+              phone={bannerData.phone}
+              website={bannerData.website}
+              hours={bannerData.hours}
+            />
           </div>
 
           {/* RIGHT SECTION: CUSTOMIZE BANNER SIDEBAR (4 / 12 COLS) */}
